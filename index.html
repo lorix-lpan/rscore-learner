@@ -2,16 +2,21 @@
 <html>
   <head>
     <title>R Score Calculator</title>
-    <link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
   </head>
   <body ng-app="rscoreCalc">
     <div ng-view></div>
     <!-- included js libraries -->
     <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- angularjs -->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/components/calculator/calcController.js"></script>
+    <script type="text/javascript" src="app/shared/mainInput/boxSlider.js"></script>
+    <!-- angular slider -->
+    <script type="text/javascript" src="assets/libs/angularjs-slider/dist/rzslider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/libs/angularjs-slider/dist/rzslider.min.css"/>
   </body>
 </html>

@@ -10,7 +10,8 @@
   "dependencies": {
     "angular": "latest",
     "angular-route": "latest",
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "angularjs-slider": "latest"
   },
   "license": "GPLv3"
 }
