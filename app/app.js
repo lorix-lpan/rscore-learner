@@ -3,18 +3,20 @@ var app = angular.module('rscoreCalc', ['ngRoute']);
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/', {
-      templateUrl: 'app/views/home.html',
-      controller: 'homeController'
+      redirectTo: '/calculator'
+    }).
+    when('/calculator', {
+      templateUrl: 'app/components/calculator/calculator.html',
+      controller: 'calcController'
     }).
     when('/overall', {
-      templateUrl: 'app/views/overall.html',
       controller: 'overallController'
     }).
     when('/about', {
-      templateUrl: 'app/views/about.html',
+      templateUrl: 'app/components/about/about.html',
       controller: 'aboutController'
     }).
     otherwise({
-      redirectTo: '/'
+      redirectTo: '/calculator'
     });
 }]);
