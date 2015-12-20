@@ -6,7 +6,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
   </head>
   <body ng-app="rscoreCalc">
-    <div ng-view></div>
+    <div class="container">
+      <text-title></text-title>
+      <div ng-view></div>
+    </div>
     <!-- included js libraries -->
     <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular-route/angular-route.min.js"></script>
@@ -14,9 +17,20 @@
     <!-- angularjs -->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/components/calculator/calcController.js"></script>
+    <script type="text/javascript" src="app/shared/textTitle/textTitle.js"></script>
     <script type="text/javascript" src="app/shared/mainInput/boxSlider.js"></script>
     <!-- angular slider -->
     <script type="text/javascript" src="assets/libs/angularjs-slider/dist/rzslider.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/libs/angularjs-slider/dist/rzslider.min.css"/>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-71554871-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
