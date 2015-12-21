@@ -1,12 +1,12 @@
 <div class="row top-buffer">
-  <div class="col-md-2 col-xs-2 text-center top-buffer">
+  <div class="col-md-2 col-xs-3 text-center top-buffer">
     <span class="labels">{{ type.name }}</span>
   </div>
-  <div class="col-md-2 col-xs-2 top-buffer">
+  <div class="col-md-2 col-xs-1 top-buffer">
       <input type="text" size="4" ng-model="type.value" min="type.options.min"
       max="type.options.max" required>
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 col-xs-8">
     <rzslider rz-slider-model="type.value" rz-slider-options="type.options"></rzslider>
   </div>
 </div>
