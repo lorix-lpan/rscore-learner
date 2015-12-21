@@ -1,9 +1,9 @@
-<div class="row">
-  <div class="col-md-2 col-xs-2 vertical-center">
-    <span>{{ type.name }}</span>
+<div class="row top-buffer">
+  <div class="col-md-2 col-xs-2 text-center top-buffer">
+    <span class="labels">{{ type.name }}</span>
   </div>
-  <div class="col-md-2 col-xs-2 vertical-center">
-      <input type="text" ng-model="type.value" min="type.options.min"
+  <div class="col-md-2 col-xs-2 top-buffer">
+      <input type="text" size="4" ng-model="type.value" min="type.options.min"
       max="type.options.max" required>
   </div>
   <div class="col-md-8">
