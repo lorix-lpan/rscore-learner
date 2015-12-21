@@ -24,25 +24,25 @@ app.controller('calcController', ['$scope', function ($scope) {
   };
 
   $scope.grade = new BoxInput(
-    'Your Grade: ',
+    'Your Grade',
     75,
     {floor: 0, ceil: 100}
   );
   
   $scope.stdev = new BoxInput(
-    'Class Standard Deviation: ',
+    'Standard Deviation',
     10,
     {floor: 0, ceil: 100}
   );
 
   $scope.average = new BoxInput(
-    'Class Average: ',
+    'Class Average',
     75,
     {floor: 0, ceil: 100}
   );
 
   $scope.haverage = new BoxInput(
-    'High School Average: ',
+    'High School Average',
     75,
     {floor: 0, ceil: 100}
   );
