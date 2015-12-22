@@ -5,7 +5,7 @@ app.controller('calcController', ['$scope', function ($scope) {
     this.options = options;
   }
 
-  var rcalc = function (grade, stdev, avr, havr) {
+  $scope.rcalc = function (grade, stdev, avr, havr) {
     if (grade > 100 || stdev > 100 || avr > 100 || havr > 100)
       return "Error";
 
@@ -13,14 +13,6 @@ app.controller('calcController', ['$scope', function ($scope) {
     var gstr = (havr - 75) / 14;
     var rscore = (zscore + gstr + 5) * 5; 
     return !rscore ? "Error" : Math.floor(rscore*100)/100;
-  };
-
-  var getR = function () {
-    return rcalc($scope.grade.value, 
-                 $scope.stdev.value, 
-                 $scope.average.value, 
-                 $scope.haverage.value
-                );
   };
 
   $scope.grade = new BoxInput(
@@ -47,21 +39,11 @@ app.controller('calcController', ['$scope', function ($scope) {
     {floor: 0, ceil: 100}
   );
 
-  $scope.rscore = getR();
-
-  $scope.$watch('grade.value', function () {
-    $scope.rscore = getR();
-  });
-
-  $scope.$watch('stdev.value', function () {
-    $scope.rscore = getR();
-  });
-
-  $scope.$watch('average.value', function () {
-    $scope.rscore = getR();
-  });
-
-  $scope.$watch('haverage.value', function () {
-    $scope.rscore = getR();
-  });
+  $scope.rscore = function () {
+    return $scope.rcalc($scope.grade.value, 
+                 $scope.stdev.value, 
+                 $scope.average.value, 
+                 $scope.haverage.value
+                );
+  };
 }]);
