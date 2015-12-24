@@ -10,6 +10,7 @@
   <body ng-app="rscoreCalc">
     <div class="container">
       <text-title></text-title>
+      <ch-lang></ch-lang>
       <div ng-view></div>
       <div class="row">
         <div class="col-md-4 pull-right">
@@ -20,12 +21,14 @@
     <!-- included js libraries -->
     <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular-route/angular-route.min.js"></script>
-    <script type="text/javascript" src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-material/angular.material.min.js"></script>
     <!-- angularjs -->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/components/calculator/calcController.js"></script>
-    <script type="text/javascript" src="app/shared/textTitle/textTitle.js"></script>
-    <script type="text/javascript" src="app/shared/mainInput/boxSlider.js"></script>
+    <script type="text/javascript" src="app/services/languageService.js"></script>
+    <script type="text/javascript" src="app/shared/text-title/textTitle.js"></script>
+    <script type="text/javascript" src="app/shared/main-input/boxSlider.js"></script>
+    <script type="text/javascript" src="app/shared/ch-lang/chLang.js"></script>
     <!-- angular slider -->
     <script type="text/javascript" src="assets/libs/angularjs-slider/dist/rzslider.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/libs/angularjs-slider/dist/rzslider.min.css"/>

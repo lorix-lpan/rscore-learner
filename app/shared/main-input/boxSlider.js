@@ -4,6 +4,6 @@ app.directive('boxSlider', function () {
     scope: {
       type: '='
     },
-    templateUrl: 'app/shared/mainInput/box-slider.html'
+    templateUrl: 'app/shared/main-input/box-slider.html'
   };
 });

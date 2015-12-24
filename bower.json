@@ -8,8 +8,9 @@
     "url": "https://github.com/lorix-lpan/rscore-learner"
   },
   "dependencies": {
-    "angular": "latest",
-    "angular-route": "latest",
+    "angular": "1.4.*",
+    "angular-route": "1.4.*",
+    "angular-material": "latest",
     "bootstrap": "latest",
     "angularjs-slider": "latest"
   },
