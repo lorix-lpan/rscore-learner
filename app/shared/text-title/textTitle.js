@@ -1,4 +1,4 @@
-app.directive('textTitle', ['languageService', function (language, $http) {
+app.directive('textTitle', ['languageService', function (language) {
 
   var link = function (scope) {
     var lala = language.trans.data.titles;
