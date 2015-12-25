@@ -1,23 +1,8 @@
 app.controller('calcController', ['$scope', 'languageService',
   
-  function ($scope, language) {
-  var trans = {
-    en: {
-      GRADE: 'Your Grade',
-      STDEV: 'Standard Deviation',
-      AVR: 'Class Average',
-      HAVR: 'High School Average',
-      RSCORE: 'Your R Score is '
-    },
-    fr: {
-      GRADE: 'Votre Note',
-      STDEV: 'Ecart Type',
-      AVR: 'Moyenne de la Classe',
-      HAVR: 'Moyenne au secondaire',
-      RSCORE: 'Votre Cote R est '
-    }
-  };
-
+function ($scope, language) {
+  var trans = language.trans.data.calculator;
+  var lang = language.lang;
   function BoxInput(name, value, options) {
     this.name = name;
     this.value = value;
@@ -35,28 +20,30 @@ app.controller('calcController', ['$scope', 'languageService',
   };
 
   $scope.grade = new BoxInput(
-    'Your Grade',
+    trans[lang].GRADE,
     75,
     {floor: 0, ceil: 100}
   );
   
   $scope.stdev = new BoxInput(
-    'Standard Deviation',
+    trans[lang].STDEV,
     10,
     {floor: 0, ceil: 100}
   );
 
   $scope.average = new BoxInput(
-    'Class Average',
+    trans[lang].AVR,
     75,
     {floor: 0, ceil: 100}
   );
 
   $scope.haverage = new BoxInput(
-    'High School Average',
+    trans[lang].HAVR,
     75,
     {floor: 0, ceil: 100}
   );
+
+  $scope.rscoreText = trans.en.RSCORE;
 
   $scope.rscore = function () {
     return $scope.rcalc($scope.grade.value, 
@@ -65,8 +52,6 @@ app.controller('calcController', ['$scope', 'languageService',
                  $scope.haverage.value
                 );
   };
-
-  $scope.rscoreText = trans.en.RSCORE;
 
   $scope.$watch(function () {
     return language.lang;

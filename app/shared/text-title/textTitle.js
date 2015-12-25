@@ -1,19 +1,10 @@
-app.directive('textTitle', ['languageService', function (language) {
-  var trans = {
-    en: {
-      TITLE: 'Get Your R Score',
-      SECTITLE: 'A Better and Smarter R Score Calculator'
-    },
-    fr: {
-      TITLE: 'Obtenez votre cote R',
-      SECTITLE: 'Une Calculatrice pour la Cote R Mieux et Plus Intelligemment'
-    }
-  };
+app.directive('textTitle', ['languageService', function (language, $http) {
 
   var link = function (scope) {
+    var lala = language.trans.data.titles;
     var update = function () {
-      scope.title = trans[language.lang.toString()].TITLE;
-      scope.secTitle = trans[language.lang.toString()].SECTITLE;
+      scope.title = lala[language.lang.toString()].TITLE;
+      scope.secTitle = lala[language.lang.toString()].SECTITLE;
     };
     //assign text according to language.lang
     update();
