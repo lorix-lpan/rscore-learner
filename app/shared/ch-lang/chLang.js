@@ -4,7 +4,7 @@ app.directive('chLang', ['languageService', '$timeout', function (language, $tim
     var fr = angular.element(element.find('span')[1]);
     var classes = [en, fr];
     // nodeList to list of dom objects
-    language.toList(document.querySelectorAll('.translate'), classes);
+    // language.toList(document.querySelectorAll('.translate'), classes);
     // initialization
     en.addClass('ch-active');
     fr.addClass('ch-still');

@@ -1,6 +1,6 @@
 app.directive('textTitle', ['languageService', function (language) {
 
-  var link = function (scope) {
+  var link = function (scope, element, attrs) {
     var lala = language.trans.data.titles;
     var update = function () {
       scope.title = lala[language.lang.toString()].TITLE;
@@ -8,7 +8,6 @@ app.directive('textTitle', ['languageService', function (language) {
     };
     //assign text according to language.lang
     update();
-    // watch changes of language.lang
     scope.$watch(function () {
       return language.lang;
     }, function () {
