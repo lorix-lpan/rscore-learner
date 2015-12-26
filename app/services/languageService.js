@@ -8,7 +8,7 @@ function ($http, $timeout) {
   // if set language button(s) is clicked
   language.buttonClicked = false;
   // assign data of translate.json to language.trans.data
-  $http.get('./translate.json').then(function (data) {
+  $http.get('app/translate.json').then(function (data) {
     language.data =  data;
   });
   // get data, ensure data is loaded
