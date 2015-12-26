@@ -1,7 +1,7 @@
 app.directive('textTitle', ['languageService', function (language) {
 
   var link = function (scope, element, attrs) {
-    var lala = language.trans.data.titles;
+    var lala = language.getData().data.titles;
     var update = function () {
       scope.title = lala[language.lang.toString()].TITLE;
       scope.secTitle = lala[language.lang.toString()].SECTITLE;

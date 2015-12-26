@@ -7,14 +7,21 @@ function ($http, $timeout) {
   language.lang = 'en';
   // if set language button(s) is clicked
   language.buttonClicked = false;
+  // assign data of translate.json to language.trans.data
+  $http.get('./translate.json').then(function (data) {
+    language.data =  data;
+  });
+  // get data, ensure data is loaded
+  language.getData = function () {
+    while (!language.data) {
+      console.log("loading");
+    }
+    return language.data;
+  };
   // set language
   language.setLang = function (lang) {
     this.lang = lang;
   };
-  // assign data of translate.json to language.trans.data
-  $http.get('./translate.json').then(function (data) {
-    language.trans = data;
-  });
   // alternate state of the switcher button
   // lang => string
   // btn => jqlite object
@@ -54,10 +61,12 @@ function ($http, $timeout) {
   };
   // helpers
   // nodelist from querySelectorAll to list of dom objects
-  language.toList = function (nodeList, list) {
+  language.toList = function (nodeList) {
+    var list = [];
     for (var i = 0; i < nodeList.length; i++) {
       list.push(angular.element(nodeList[i]));
     }
+    return list;
   };
   return language;
 }]);

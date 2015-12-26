@@ -1,7 +1,6 @@
 app.directive('animateTrans', ['languageService', function (language) {
   var link = function (scope, element, attrs) {
-    var tags = [];
-    language.toList(element[0].querySelectorAll('.ng-binding'), tags);
+    var tags = language.toList(element[0].querySelectorAll('.ng-binding'));
     // receive signal from language switcher buttons
     scope.$watch(function () {
       return language.buttonClicked;

@@ -1,7 +1,7 @@
 app.controller('calcController', ['$scope', 'languageService',
   
 function ($scope, language) {
-  var trans = language.trans.data.calculator;
+  var trans = language.getData().data.calculator;
   var lang = language.lang;
   function BoxInput(name, value, options) {
     this.name = name;
