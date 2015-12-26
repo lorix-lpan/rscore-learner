@@ -11,7 +11,8 @@
     "angular": "1.4.*",
     "angular-route": "1.4.*",
     "bootstrap": "latest",
-    "angularjs-slider": "latest"
+    "angularjs-slider": "latest",
+    "animate.css": "latest"
   },
   "license": "GPLv3"
 }

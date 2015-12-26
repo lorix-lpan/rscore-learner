@@ -6,7 +6,7 @@
     },
     "fr": {
       "TITLE": "Obtenez votre cote R",
-      "SECTITLE": "Une Calculatrice pour la Cote R Mieux et Plus Intelligemment"
+      "SECTITLE": "Une Calculatrice intelligente de Cote R, améliorée"
     }
   },
   "calculator": {
@@ -19,7 +19,7 @@
     },
     "fr": {
       "GRADE": "Votre Note",
-      "STDEV": "Ecart Type",
+      "STDEV": "L'écart-type",
       "AVR": "Moyenne de Classe",
       "HAVR": "Moyenne au secondaire",
       "RSCORE": "Votre Cote R est "
