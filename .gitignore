@@ -1,3 +1,6 @@
 assets/libs
 assets/css
 .sass-cache/
+node_modules/
+*.swp
+dist/
