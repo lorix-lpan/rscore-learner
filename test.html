@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get Your R Score</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpe" href="assets/img/icon.jpe">
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/libs/animate.css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <!-- angular slider -->
+    <link rel="stylesheet" type="text/css" href="assets/libs/angularjs-slider/dist/rzslider.min.css"/>
+  </head>
+  <body ng-app="rscoreCalc">
+    <div class="container">
+      <text-title animate-trans></text-title>
+      <ch-lang></ch-lang>
+      <div ng-view></div>
+      <div class="row">
+        <div class="col-md-4 pull-right">
+          <p class="text-right" id="copyright">&copy; 2015 Lawrence Pan &mdash; All rights reserved</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- angularjs -->
+    <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angularjs-slider/dist/rzslider.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/languageService.js"></script>
+    <script type="text/javascript" src="app/shared/animateTrans.js"></script>
+    <script type="text/javascript" src="app/shared/main-input/boxSlider.js"></script>
+    <script type="text/javascript" src="app/shared/ch-lang/chLang.js"></script>
+    <script type="text/javascript" src="app/shared/text-title/textTitle.js"></script>
+    <script type="text/javascript" src="app/components/calculator/calcController.js"></script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-71554871-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
