@@ -9,14 +9,14 @@ function ($http, $timeout) {
   language.buttonClicked = false;
   // assign data of translate.json to language.trans.data
   $http.get('app/translate.json').then(function (data) {
-    language.data =  data;
+    language.trans = data;
   });
   // get data, ensure data is loaded
   language.getData = function () {
-    while (!language.data) {
-      console.log("loading");
+    while (!language.trans) {
+      console.log('loading json');
     }
-    return language.data;
+    return language.trans;
   };
   // set language
   language.setLang = function (lang) {
