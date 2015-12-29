@@ -5,9 +5,6 @@ app.directive('chLang', ['languageService', '$timeout', function (language, $tim
     var classes = [en, fr];
     // nodeList to list of dom objects
     // language.toList(document.querySelectorAll('.translate'), classes);
-    // initialization
-    en.addClass('ch-active');
-    fr.addClass('ch-still');
     scope.setLang = function (lang) {
       // no effect if active button is clicked
       if (language.lang === lang) {
@@ -23,8 +20,8 @@ app.directive('chLang', ['languageService', '$timeout', function (language, $tim
     // according to the current lang, assign state of lang button
     scope.$watch(function () {
       return language.lang;
-    }, function (newVal) {
-      language.altButton('en', en, fr, newVal, 'ch-active', 'ch-still');
+    }, function () {
+      scope.lang = language.lang;
     });
   };
   return {

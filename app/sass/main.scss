@@ -1,21 +1,7 @@
 @import 'compass/css3';
-@import 'calculator';
-@import 'chLang';
-@import 'helpers';
-@import 'shared/textTitle';
 @import 'shared/langButton';
 @import url(https://fonts.googleapis.com/css?family=Exo+2:900);
 
-* {
-  font-family: 'Exo 2', sans-serif;;
-}
-
 html, body {
-  height: 100%;
-  width: 100%;
-  background-color: #1a1a1a;
-}
-
-#copyright {
-  margin-top: 40px;
+  background-color: white;
 }

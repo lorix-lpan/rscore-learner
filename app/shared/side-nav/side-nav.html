@@ -1,0 +1,19 @@
+<div layout="column" layout-fill ng-cloak>
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-theme-indigo">
+        <ch-lang></ch-lang>
+        <nav-title animate-trans></nav-title>
+      </md-toolbar>
+    </md-sidenav>
+    <md-content flex>
+      <div layout="column" layout-fill>
+        <content-bar></content-bar>
+        <div ng-view layout-margin></div>
+        <p class="text-right" id="copyright">&copy&nbsp;2015 Lawrence Pan
+          &mdash;&nbsp;All rights reserved</p>
+      </div>
+    </md-content>
+  </section>
+</div>

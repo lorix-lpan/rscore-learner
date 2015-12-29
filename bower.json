@@ -10,6 +10,9 @@
   "dependencies": {
     "angular": "1.4.*",
     "angular-route": "1.4.*",
+    "angular-material": "latest",
+    "angular-aria": "latest",
+    "angular-animate": "latest",
     "bootstrap": "latest",
     "angularjs-slider": "latest",
     "animate.css": "latest"

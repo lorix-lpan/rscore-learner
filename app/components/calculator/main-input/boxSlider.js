@@ -5,6 +5,6 @@ app.directive('boxSlider', ['languageService', '$timeout', function (language, $
     scope: {
       type: '='
     },
-    templateUrl: 'app/shared/main-input/box-slider.html'
+    templateUrl: 'app/components/calculator/main-input/box-slider.html'
   };
 }]);

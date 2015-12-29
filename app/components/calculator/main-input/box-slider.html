@@ -1,0 +1,14 @@
+<div layout="row">
+  <div animate-trans flex="30">
+    <div layout="row">
+      <md-input-container>
+        <label class="md-title">{{ type.name }}</label>
+        <input ng-model="type.value">
+      </md-input-container>
+    </div>
+  </div>
+  <div flex="60">
+    <md-slider flex class="md-primary" ng-model="type.value" min="0" max="100">
+    </md-slider>
+  </div>
+</div>
