@@ -11,6 +11,8 @@ module.exports = function (grunt) {
               'assets/libs/angularjs-slider/dist/rzslider.js',
               // angular files
               'app/app.js', 
+              'app/config/route.js',
+              'app/config/translate.js',
               'app/services/languageService.js',
               'app/components/calculator/calcController.js', 
               'app/shared/animateTrans.js',
