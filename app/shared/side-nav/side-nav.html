@@ -6,13 +6,16 @@
         <ch-lang></ch-lang>
         <nav-title animate-trans></nav-title>
       </md-toolbar>
+      <nav-list animate-trans></nav-list>
     </md-sidenav>
     <md-content flex>
       <div layout="column" layout-fill>
         <content-bar></content-bar>
-        <div ng-view layout-margin></div>
-        <p class="text-right" id="copyright">&copy&nbsp;2015 Lawrence Pan
-          &mdash;&nbsp;All rights reserved</p>
+        <div ng-view></div>
+        <p class="text-right" style="position:absolute;bottom:10px;right:10px">
+          &copy&nbsp;2015 Lawrence Pan
+          &mdash;&nbsp;All rights reserved
+        </p>
       </div>
     </md-content>
   </section>

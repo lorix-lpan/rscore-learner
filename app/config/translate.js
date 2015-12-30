@@ -26,6 +26,20 @@ app.config(['languageServiceProvider', function (language) {
           "HAVR": "Moyenne au secondaire",
           "RSCORE": "Votre Cote R est "
         }
+      },
+      "navList": {
+        "en": {
+          "CALC": "The Calculator",
+          "ABOUT": "About R Score",
+          "ESTIMATE": "Estimate Your Group Strength",
+          "SUBMIT": "Submit Your Old R Score"
+        },
+        "fr": {
+          "CALC": "La Calculatrice",
+          "ABOUT": "À Propos de Cote R",
+          "ESTIMATE": "Estimate Your Group Strength",
+          "SUBMIT": "soumettre votre Cote R anciene"
+        }
       }
     });
 }]);

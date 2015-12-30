@@ -1,14 +1,16 @@
-<div layout="row">
-  <div animate-trans flex="30">
-    <div layout="row">
-      <md-input-container>
-        <label class="md-title">{{ type.name }}</label>
-        <input ng-model="type.value">
+<div layout="row" style="height:60px">
+  <div flex="40">
+    <h6 flex-offset="10" class="md-subhead">{{ type.name }}</h6>
+  </div>
+  <div flex="10">
+    <div layout="column">
+      <md-input-container style="position:relative;top:-10px">
+        <input style="text-align:center;font-size:15px"ng-model="type.value">
       </md-input-container>
     </div>
   </div>
-  <div flex="60">
-    <md-slider flex class="md-primary" ng-model="type.value" min="0" max="100">
+  <div flex-offset="5" flex="40">
+    <md-slider flex ng-class="sliderClass" ng-model="type.value" min="0" max="100">
     </md-slider>
   </div>
 </div>
