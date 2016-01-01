@@ -4,5 +4,7 @@
 <box-slider type="average"></box-slider>
 <box-slider type="haverage"></box-slider>
 <div animate-trans style="position:relative;left:40px">
-  <h1 class="md-title" style="font-weight:bold">{{ rscoreText }}<span>{{ rscore() }}</span></h1>
+  <h1 class="md-title" style="font-weight:bold">{{ rscoreText }}
+    <span>{{ rscore() | number:2 }}</span>
+  </h1>
 </div>

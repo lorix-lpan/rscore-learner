@@ -7,7 +7,7 @@
     </md-tab-label>
     <md-tab-body>
       <div style="margin-top: 25px">
-        <calc-rscore></calc-rscore>
+        <calc-rscore score="tab.score"></calc-rscore>
       </div>
     </md-tab-body>
   </md-tab>
@@ -17,3 +17,8 @@
     </md-tab-label>
   </md-tab>
 </md-tabs>
+<md-content layout="row" layout-padding>
+  <h2>
+    Your Overall R Score: <span>{{ overallScore() | number:2 }}</span>
+  </h2>
+</md-content>

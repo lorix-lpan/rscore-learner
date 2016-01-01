@@ -1,5 +1,5 @@
 app.directive('calcRscore', function () {
-  var controller = ['$scope', 'languageService', function ($scope, language) {
+  var controller = ['$scope', 'languageService', function ($scope,  language) {
     var trans = language.trans.calculator;
     var lang = language.lang;
     function BoxInput(name, value, options) {
@@ -15,7 +15,7 @@ app.directive('calcRscore', function () {
       var zscore = (grade - avr) / stdev;
       var gstr = (havr - 75) / 14;
       var rscore = (zscore + gstr + 5) * 5;
-      return !rscore ? "Error" : Math.floor(rscore*100)/100;
+      return !rscore ? "Error" : rscore;
     };
 
     $scope.grade = new BoxInput(
@@ -52,6 +52,10 @@ app.directive('calcRscore', function () {
                   );
     };
 
+    $scope.$watch('rscore()', function (newVal) {
+      $scope.score = newVal;
+    });
+
     $scope.$watch(function () {
       return language.lang;
     }, function () {
@@ -67,6 +71,9 @@ app.directive('calcRscore', function () {
   return {
     restrict: 'E',
     templateUrl: 'app/components/calculator/calc-rscore/calc-rscore.html',
+    scope: {
+      score: '='
+    },
     controller: controller
   };
 });

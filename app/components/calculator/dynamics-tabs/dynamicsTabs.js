@@ -1,7 +1,17 @@
 app.directive('dynamicsTabs', function () {
   var controller = ['$scope', '$rootScope', '$mdDialog', 'tabService', 
   function ($scope, $rootScope, $mdDialog, sharedTab) {
-    var tabs = [ { title: 'Untitled'.toUpperCase(), credits: 2 } ];
+    var tabs = [ { title: 'Untitled'.toUpperCase(), credits: 2.66 } ];
+
+    $scope.overallScore = function () {
+      var scores = 0;
+      var credits = 0;
+      for (var i = 0; i < tabs.length; i++) {
+        scores += tabs[i].credits * tabs[i].score;
+        credits += parseFloat(tabs[i].credits);
+      }
+      return scores / credits;
+    };
 
     var editDialog = function (tab, type) {
       // type: new or modify
