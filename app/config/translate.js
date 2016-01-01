@@ -7,7 +7,7 @@ app.config(['languageServiceProvider', function (language) {
           "SECTITLE": "A Better and Smarter R Score Calculator"
         },
         "fr": {
-          "TITLE": "Obtenez votre cote R",
+          "TITLE": "Obtenez Votre Cote R",
           "SECTITLE": "Une Calculatrice intelligente de Cote R, améliorée"
         }
       },
@@ -31,14 +31,40 @@ app.config(['languageServiceProvider', function (language) {
         "en": {
           "CALC": "The Calculator",
           "ABOUT": "About R Score",
-          "ESTIMATE": "Estimate Your Group Strength",
+          "ESTIMATE": "Estimate the Group Strength",
           "SUBMIT": "Submit Your Old R Score"
         },
         "fr": {
           "CALC": "La Calculatrice",
           "ABOUT": "À Propos de Cote R",
-          "ESTIMATE": "Estimate Your Group Strength",
-          "SUBMIT": "soumettre votre Cote R anciene"
+          "ESTIMATE": "Estimer la Puissance du Groupe",
+          "SUBMIT": "Soumettre Cote R Ancienne"
+        }
+      },
+      "dynamicsTabs": {
+        "en": {
+          "OVERALL": "Overall R Score: "
+        },
+        "fr": {
+          "OVERALL": "Cote R Globale: "
+        }
+      },
+      "dialog": {
+        "en": {
+          "COURSE": "Course",
+          "CREDITS": "Credits",
+          "CREATE": "New Subject",
+          "MODIFY": "Edit Subject",
+          "REQUIRE": "This Field is Required",
+          "INVALID": "Invalid Input"
+        },
+        "fr": {
+          "COURSE": "Cours",
+          "CREDITS": "Crédits",
+          "CREATE": "Créer Sujet",
+          "MODIFY": "Modifier Sujet",
+          "REQUIRE": "Ce champ est requis",
+          "INVALID": "Entrée Invalide"
         }
       }
     });

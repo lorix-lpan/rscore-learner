@@ -1,6 +1,18 @@
-app.directive('dynamicsTabs', function () {
+app.directive('dynamicsTabs', ['languageService', function (language) {
   var controller = ['$scope', '$rootScope', '$mdDialog', 'tabService', 
-  function ($scope, $rootScope, $mdDialog, sharedTab) {
+  function ($scope, $rootScope, $mdDialog, defaultTab) {
+    // translation framework
+    var trans = language.trans.dynamicsTabs;
+    var update = function () {
+      $scope.OVERALL = trans[language.lang.toString()].OVERALL;
+    };
+    update();
+    $scope.$watch(function () {
+      return language.lang;
+    }, function () {
+      update();
+    });
+    // list of tabs
     var tabs = [ { title: 'Untitled'.toUpperCase(), credits: 2.66 } ];
 
     $scope.overallScore = function () {
@@ -33,7 +45,7 @@ app.directive('dynamicsTabs', function () {
     };
     $scope.tabs = tabs;
     $scope.addTab = function (ev) {
-      var tab = angular.copy(sharedTab);
+      var tab = angular.copy(defaultTab);
       tabs.push(tab);
       $scope.showDialog(ev);
       editDialog(tab, 'new');
@@ -62,14 +74,31 @@ app.directive('dynamicsTabs', function () {
     };
 
     var DialogController = ['$scope', '$rootScope', '$mdDialog', 'tabService', 
-    function ($scope, $rootScope, $mdDialogm, sharedTab) {
+    function ($scope, $rootScope, $mdDialogm, defaultTab) {
+      // translation framework
+      var trans = language.trans.dialog;
+      var update = function () {
+        $scope.COURSE = trans[language.lang.toString()].COURSE;
+        $scope.CREDITS = trans[language.lang.toString()].CREDITS;
+        $scope.CREATE = trans[language.lang.toString()].CREATE;
+        $scope.MODIFY = trans[language.lang.toString()].MODIFY;
+        $scope.REQUIRE = trans[language.lang.toString()].REQUIRE;
+        $scope.INVALID = trans[language.lang.toString()].INVALID;
+      };
+      update();
+      $scope.$watch(function () {
+        return language.lang;
+      }, function () {
+        update();
+      });
+      // if close unregister listeners
       $rootScope.isClosed = false;
       $scope.tab = $rootScope.tab;
       if ($scope.tab.type === 'new') {
-        $scope.NEW_EDIT = 'new subject'.toUpperCase();
+        $scope.NEW_EDIT = $scope.CREATE.toUpperCase();
       } 
       if ($scope.tab.type === 'edit') {
-        $scope.NEW_EDIT = 'edit subject'.toUpperCase();
+        $scope.NEW_EDIT = $scope.MODIFY.toUpperCase();
       }
       $scope.$watch('tab.title', function (newVal) {
         $rootScope.$broadcast('newTitle', newVal);
@@ -90,4 +119,4 @@ app.directive('dynamicsTabs', function () {
     templateUrl: 'app/components/calculator/dynamics-tabs/dynamics-tabs.html',
     controller: controller
   };
-});
+}]);

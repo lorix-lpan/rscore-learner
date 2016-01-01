@@ -11,4 +11,5 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     otherwise({
       redirectTo: '/calculator'
     });
+  $locationProvider.html5Mode(true);
 }]);

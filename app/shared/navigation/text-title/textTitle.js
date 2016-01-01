@@ -1,9 +1,9 @@
-app.directive('navTitle', ['languageService', function (language) {
+app.directive('textTitle', ['languageService', function (language) {
 
   var link = function (scope, element, attrs) {
     var lala = language.trans.titles;
     var update = function () {
-      scope.sectitle = lala[language.lang.toString()].SECTITLE;
+      scope.title = lala[language.lang.toString()].TITLE;
     };
     //assign text according to language.lang
     update();
@@ -15,7 +15,7 @@ app.directive('navTitle', ['languageService', function (language) {
   };
   return {
     restrict: 'E',
-    templateUrl: 'app/shared/nav-title/nav-title.html',
+    templateUrl: 'app/shared/navigation/text-title/text-title.html',
     link: link
   };
 }]);

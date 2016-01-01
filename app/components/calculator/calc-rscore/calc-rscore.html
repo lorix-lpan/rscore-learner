@@ -1,10 +1,14 @@
-<div style="margin-top: 50px"></div>
-<box-slider type="grade"></box-slider>
-<box-slider type="stdev"></box-slider>
-<box-slider type="average"></box-slider>
-<box-slider type="haverage"></box-slider>
-<div animate-trans style="position:relative;left:40px">
-  <h1 class="md-title" style="font-weight:bold">{{ rscoreText }}
-    <span>{{ rscore() | number:2 }}</span>
-  </h1>
-</div>
+<div style="margin-top: 20px"></div>
+<md-content layout="column">
+  <box-slider type="grade"></box-slider>
+  <box-slider type="stdev"></box-slider>
+  <box-slider type="average"></box-slider>
+  <box-slider type="haverage"></box-slider>
+  <div layout="row" animate-trans>
+    <div flex="40">
+      <h1 flex-offset="10" class="md-title" style="font-weight:bold">{{ rscoreText }}
+        <span>{{ rscore() | number:2 }}</span>
+      </h1>
+    </div>
+  </div>
+</md-content>

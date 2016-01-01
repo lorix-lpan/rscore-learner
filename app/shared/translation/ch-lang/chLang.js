@@ -26,7 +26,7 @@ app.directive('chLang', ['languageService', '$timeout', function (language, $tim
   };
   return {
     restrict: 'E',
-    templateUrl: 'app/shared/ch-lang/ch-lang.html',
+    templateUrl: 'app/shared/translation/ch-lang/ch-lang.html',
     link: link
   };
 }]);

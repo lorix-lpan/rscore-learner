@@ -1,0 +1,8 @@
+<md-list style="font-size:16px">
+  <div ng-repeat="nav in navList">
+    <md-list-item animate-trans ng-click="navigateTo(nav.desti)">
+      <md-icon md-svg-icon="{{ nav.icon }}"></md-icon>
+      <p>{{ nav.label() }}</p>
+    </md-list-item>
+  </div>
+</md-list>

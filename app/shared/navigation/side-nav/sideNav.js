@@ -52,7 +52,7 @@ app.directive('sideNav', function () {
   return {
     scope: true,
     restrict: 'E',
-    templateUrl: 'app/shared/side-nav/side-nav.html',
+    templateUrl: 'app/shared/navigation/side-nav/side-nav.html',
     controller: controller
   };
 });

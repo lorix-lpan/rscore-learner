@@ -1,16 +1,21 @@
 <div layout="row" style="height:60px">
   <div animate-trans flex="40">
-    <h6 flex-offset="10" class="md-subhead">{{ type.name }}</h6>
+    <h6 flex-offset="10" style="position:relative;top:-25px" class="md-subhead">{{ type.name }}</h6>
   </div>
   <div flex="10">
     <div layout="column">
       <md-input-container style="position:relative;top:-10px">
-        <input style="text-align:center;font-size:15px"ng-model="type.value">
+        <input aria-label="{{ type.name }} input" 
+        style="text-align:center;font-size:15px"ng-model="type.value">
       </md-input-container>
     </div>
   </div>
   <div flex-offset="5" flex="40">
-    <md-slider flex ng-class="sliderClass" ng-model="type.value" min="0" max="100">
+    <md-slider aria-label="{{ type.name }} slider" flex 
+      ng-class="sliderClass" 
+      ng-model="type.value" 
+      min="0" 
+      max="100">
     </md-slider>
   </div>
 </div>

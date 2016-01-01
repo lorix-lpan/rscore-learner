@@ -8,24 +8,24 @@
     <md-dialog-content>
       <md-content layout="column" layout-padding>
         <md-input-container class="md-block">
-          <label>Course</label>
+          <label>{{ COURSE }}</label>
           <input name="title" ng-model="tab.title" required>
           <div ng-messages="subjectForm.title.$error" md-auto-hide="false">
             <div ng-message="required">
-              A Name is Required
+              {{ REQUIRE }}
             </div>
           </div>
         </md-input-container>
         <md-input-container>
-          <label>Credits</label>
+          <label>{{ CREDITS }}</label>
           <input name="credits" ng-model="tab.credits" ng-pattern="/^[0-9]*\.?[0-9]+$/"required>
           <div ng-messages="subjectForm.credits.$error" multiple
             md-auto-hide="false">
             <div ng-message="required">
-              This Field is Required
+              {{ REQUIRE }}
             </div>
             <div ng-message="pattern">
-              Invalid Input
+              {{ INVALID }}
             </div>
           </div>
         </md-input-container>
