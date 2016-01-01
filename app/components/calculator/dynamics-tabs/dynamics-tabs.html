@@ -1,7 +1,19 @@
 <md-tabs md-dynamic-height md-selected="selectedIndex" md-border-bottom="" md-autoselect="">
-  <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
-    <div style="margin-top: 25px">
-      <calc-rscore></calc-rscore>
-    </div>
+  <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled">
+    <md-tab-label>
+      {{ tab.title }}
+      <md-icon style="cursor:pointer;height:15px" ng-click="modifyTab(tab, $event)"
+        md-svg-icon="assets/img/wrench.svg"></md-icon>
+    </md-tab-label>
+    <md-tab-body>
+      <div style="margin-top: 25px">
+        <calc-rscore></calc-rscore>
+      </div>
+    </md-tab-body>
+  </md-tab>
+  <md-tab class="add-tab" ng-click="addTab($event)">
+    <md-tab-label>
+      <md-icon style="cursor:pointer" md-svg-icon="assets/img/plus.svg"></md-icon>
+    </md-tab-label>
   </md-tab>
 </md-tabs>
