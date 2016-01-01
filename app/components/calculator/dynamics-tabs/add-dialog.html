@@ -1,22 +1,36 @@
 <md-dialog>
-  <form>
+  <form name="subjectForm">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2>{{ NEW_EDIT }}</h2>
-        <span flex></span>
       </div>
     </md-toolbar>
     <md-dialog-content>
       <md-content layout="column" layout-padding>
-        <md-input-container>
+        <md-input-container class="md-block">
           <label>Course</label>
-          <input ng-model="tab.title">
+          <input name="title" ng-model="tab.title" required>
+          <div ng-messages="subjectForm.title.$error" md-auto-hide="false">
+            <div ng-message="required">
+              A Name is Required
+            </div>
+          </div>
         </md-input-container>
         <md-input-container>
           <label>Credits</label>
-          <input ng-model="tab.credits">
+          <input name="credits" ng-model="tab.credits" ng-pattern="/^[0-9]*\.?[0-9]+$/"required>
+          <div ng-messages="subjectForm.credits.$error" multiple
+            md-auto-hide="false">
+            <div ng-message="required">
+              This Field is Required
+            </div>
+            <div ng-message="pattern">
+              Invalid Input
+            </div>
+          </div>
         </md-input-container>
-        <md-button ng-click="hide()" class="md-raised">Ok</md-button>
+        <md-button ng-click="hide()" 
+          ng-disabled="subjectForm.$invalid" class="md-raised">Ok</md-button>
       </md-content>
     </md-dialog-content>
   </form>

@@ -1,1 +1,1 @@
-var app = angular.module('rscoreCalc', ['ngRoute', 'ngMaterial', 'rzModule']);
+var app = angular.module('rscoreCalc', ['ngRoute', 'ngMaterial', 'ngMessages']);
