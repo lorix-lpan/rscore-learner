@@ -13,8 +13,6 @@
     "angular-material": "latest",
     "angular-aria": "latest",
     "angular-animate": "latest",
-    "bootstrap": "latest",
-    "angularjs-slider": "latest",
     "animate.css": "latest"
   },
   "license": "GPLv3"
