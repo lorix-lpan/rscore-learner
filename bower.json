@@ -13,7 +13,8 @@
     "angular-material": "latest",
     "angular-aria": "latest",
     "angular-animate": "latest",
-    "animate.css": "latest"
+    "animate.css": "latest",
+    "ngAdsense": "latest"
   },
   "license": "GPLv3"
 }

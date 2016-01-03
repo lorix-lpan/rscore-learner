@@ -13,17 +13,11 @@
         <content-bar></content-bar>
         <div ng-view></div>
         <div layout="row">
-          <div flex="40">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- Learderboard ad on rscorecalc -->
-            <ins flex-offset="10" class="adsbygoogle"
-              style="display:inline-block;width:728px;height:90px"
-              data-ad-client="ca-pub-7429277805404983"
-              data-ad-slot="2619000154"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>
+          <adsense-directive flex="40"
+              ad-client="ca-pub-7429277805404983"
+              ad-slot="2619000154"
+              style="display:inline-block;width:728px;height:90px">
+          </adsense-directive>
         </div>
         <div class="desktop-footer" layout="row" layout-padding layout-align="end end">
           <p style="font-size: 12px">
