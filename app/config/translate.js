@@ -61,8 +61,8 @@ app.config(['languageServiceProvider', function (language) {
         "fr": {
           "COURSE": "Cours",
           "CREDITS": "Crédits",
-          "CREATE": "Créer Sujet",
-          "MODIFY": "Modifier Sujet",
+          "CREATE": "Nouveau Sujet",
+          "MODIFY": "Modifier le Sujet",
           "REQUIRE": "Ce champ est requis",
           "INVALID": "Entrée Invalide"
         }
