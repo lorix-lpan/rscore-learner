@@ -25,6 +25,7 @@ module.exports = function (grunt) {
               'app/shared/navigation/side-nav/sideNav.js',
               'app/shared/navigation/nav-list/navList.js',
               'app/shared/navigation/content-bar/contentBar.js',
+              'app/shared/google-adsense/googleAdsense.js',
               'app/components/calculator/main-input/boxSlider.js',
               'app/components/calculator/dynamics-tabs/dynamicsTabs.js',
               'app/components/calculator/calc-rscore/calcRscore.js',
