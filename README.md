@@ -2,5 +2,7 @@
 
 A R score calculator written in AngularJs with responsive design and two-way-data-binding.
 
+* As seen on [www.myrscore.com](www.myrscore.com)
+
 # License
 GNU General Public License Version 3
