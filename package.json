@@ -1,8 +1,33 @@
 {
   "name": "rscore-learner",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Yet another R score calculator",
+  "main": "Gulpfile.js",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.5.0"
+    "bower": "^1.7.7",
+    "browser-sync": "^2.11.1",
+    "express": "^4.13.4",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorix-lpan/rscore-learner.git"
+  },
+  "author": "Lawrence Pan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lorix-lpan/rscore-learner/issues"
+  },
+  "homepage": "https://github.com/lorix-lpan/rscore-learner#readme",
+  "scripts": {
+    "start": "gulp"
   }
 }

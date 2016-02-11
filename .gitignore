@@ -1,6 +1,7 @@
 assets/libs
 assets/css
+assets/js
 .sass-cache/
 node_modules/
 *.swp
-dist/
+*.log
